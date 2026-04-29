@@ -11,3 +11,43 @@
   background-color: #0a0f1e;
   font-family: 'Barlow Condensed', sans-serif;
 } */
+
+.glow-text-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.glow-text-wrapper::before {
+  content: 'GET IN TOUCH';
+  position: absolute;
+  inset: 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: transparent;
+  filter: blur(40px);
+  background: linear-gradient(90deg, #1d4ed8, #69aafa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: blink-glow 2s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glow-text-wrapper h2 {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes blink-glow {
+
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}

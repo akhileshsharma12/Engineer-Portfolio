@@ -1,1 +1,95 @@
-<p>contact works!</p>
+<section id="contact" class="bg-[#080d1a] px-16 py-24 text-center"
+         style="border-top: 1px solid rgba(255,255,255,0.06);">
+
+  <div class="max-w-4xl mx-auto">
+
+    <!-- Available Badge -->
+    <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full mb-10 text-xs font-semibold tracking-widest uppercase text-slate-300"
+         style="border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04);">
+      <span class="w-2 h-2 rounded-full bg-green-400"
+            style="box-shadow: 0 0 6px #4ade80;"></span>
+      AVAILABLE FOR PROJECTS
+    </div>
+
+    <!-- Main Heading -->
+    <h2 class="font-medium uppercase leading-none text-white mb-6"
+        style="font-family: 'Barlow Condensed', sans-serif; font-size: 4rem; line-height: 1.05;">
+      LET'S BUILD SOMETHING<br>
+      <span style="
+        background: linear-gradient(90deg, #1d4ed8 0%, #60a5fa 50%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 700;
+      ">AMAZING </span>
+      <span class="text-white">TOGETHER</span>
+    </h2>
+
+    <!-- Description -->
+    <p class="text-slate-400 text-base leading-relaxed max-w-2xl mx-auto mb-12">
+      Transform your ideas into reality with expert full stack development.
+      Get a free consultation and project estimate within 24 hours.
+    </p>
+
+    <!-- Divider -->
+    <div class="border-t border-white/10 mb-12"></div>
+
+    <!-- Stats -->
+    <div class="flex items-center justify-center divide-x divide-white/10 mb-16">
+      @for (stat of stats; track stat.label) {
+        <div class="flex flex-col items-center gap-2 px-16">
+          <span class="font-medium text-white"
+                style="font-family: 'Barlow Condensed', sans-serif; font-size: 3.5rem; line-height: 1;">
+            {{ stat.value }}
+          </span>
+          <span class="text-slate-500 text-xs tracking-widest uppercase font-semibold">
+            {{ stat.label }}
+          </span>
+        </div>
+      }
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex items-center justify-center gap-5 mb-10">
+
+      <!-- Solid gradient -->
+      <a routerLink="/" fragment="footer"
+         class="inline-flex items-center gap-3 px-10 py-5 rounded-full font-black uppercase tracking-wider text-white text-sm cursor-pointer transition-opacity hover:opacity-90"
+         style="
+           background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 60%, #60a5fa 100%);
+           box-shadow: 0 0 30px rgba(59,130,246,0.35);
+           font-family: 'Barlow Condensed', sans-serif;
+           font-size: 1rem;
+           letter-spacing: 2px;
+         ">
+        START YOUR PROJECT
+        <fa-icon [icon]="faArrowRight" class="text-sm"></fa-icon>
+      </a>
+
+      <!-- Outline -->
+      <a routerLink="/" fragment="footer"
+         class="inline-flex items-center gap-3 px-10 py-5 rounded-full font-black uppercase tracking-wider text-white text-sm cursor-pointer transition-all hover:bg-white/5"
+         style="
+           border: 1.5px solid rgba(255,255,255,0.25);
+           font-family: 'Barlow Condensed', sans-serif;
+           font-size: 1rem;
+           letter-spacing: 2px;
+         ">
+        SCHEDULE A CALL
+      </a>
+
+    </div>
+
+    <!-- Trust Badges -->
+    <div class="flex items-center justify-center gap-8 flex-wrap">
+      @for (trust of trusts; track trust.label) {
+        <div class="inline-flex items-center gap-2 text-xs tracking-widest uppercase font-semibold text-slate-400">
+          <fa-icon [icon]="faCircleCheck" class="text-green-400 text-sm"></fa-icon>
+          {{ trust.label }}
+        </div>
+      }
+    </div>
+
+  </div>
+
+</section>
