@@ -7,11 +7,13 @@ import { About } from './components/about/about';
 import { Download } from './components/download/download';
 import { Footer } from './components/footer/footer';
 import { Contact } from './components/contact/contact';
+import { Journey } from './components/journey/journey';
+import { ProfessionalAccreditation } from './components/professional-accreditation/professional-accreditation';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Navbar, Hero, About, Download, Footer, Contact],
+  imports: [Navbar, Hero, About, Download, Footer, Contact, Journey, ProfessionalAccreditation],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
