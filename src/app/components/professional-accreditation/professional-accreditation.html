@@ -1,11 +1,8 @@
-<!-- accreditation.component.html -->
-<section class="bg-[#0b0f19] text-white py-16 px-6 md:px-20">
-
-  <div class="grid md:grid-cols-2 gap-10 items-center">
-
+﻿﻿<!-- accreditation.component.html -->
+<section class="bg-[#0b0f19] text-white py-16 px-6 md:px-16 lg:px-20">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
     <!-- LEFT -->
     <div>
-
       <!-- Badge -->
       <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-blue-900/30 border border-blue-500 text-sm text-blue-400 mb-6">
         <fa-icon [icon]="faTrophy"></fa-icon>
@@ -13,19 +10,13 @@
       </div>
 
       <!-- Heading -->
-      <div class="flex items-start gap-4">
-        <h2 class="text-5xl font-bold text-blue-500">
-             <span style="
-        font-size: 5rem;
-        font-weight: 900;
-        color: transparent;
-        -webkit-text-stroke: 2px #3b82f6;
-        line-height: 1;
-      ">04</span>
+      <div class="flex flex-col sm:flex-row items-start gap-4">
+        <h2 class="text-5xl md:text-6xl font-bold text-blue-500">
+          <span style="font-size: clamp(3.5rem, 10vw, 5rem); font-weight: 900; color: transparent; -webkit-text-stroke: 2px #3b82f6; line-height: 1;">04</span>
         </h2>
 
         <div>
-          <h1 class="text-4xl md:text-5xl font-medium">
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-medium leading-tight">
             PROFESSIONAL <br />
             ACCREDITATION
           </h1>
@@ -39,62 +30,45 @@
       </p>
 
       <!-- Buttons -->
-      <div class="flex gap-4 mt-8">
-
-        <button class="px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-400 text-white font-semibold shadow-lg hover:scale-105 transition-all duration-300">
+      <div class="flex flex-col sm:flex-row gap-4 mt-8">
+        <button class="w-full sm:w-auto px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-400 text-white font-semibold shadow-lg hover:scale-105 transition-all duration-300">
           CONTACT ME
         </button>
-
-        <button class="px-6 py-3 rounded-full border border-gray-500 text-gray-300 hover:bg-gray-800 transition-all duration-300">
+        <button class="w-full sm:w-auto px-6 py-3 rounded-full border border-gray-500 text-gray-300 hover:bg-gray-800 transition-all duration-300">
           VIEW PORTFOLIO
         </button>
-
       </div>
 
       <!-- Stats -->
-      <div class="flex gap-12 mt-12">
-
+      <div class="flex flex-wrap gap-8 md:gap-12 mt-12">
         <div>
           <h3 class="text-3xl font-bold">5+</h3>
           <p class="text-blue-400 text-sm mt-1">CERTIFICATIONS</p>
         </div>
-
         <div>
           <h3 class="text-3xl font-bold">10+</h3>
           <p class="text-blue-400 text-sm mt-1">COURSES</p>
         </div>
-
         <div>
           <h3 class="text-3xl font-bold">100%</h3>
           <p class="text-blue-400 text-sm mt-1">VERIFIED</p>
         </div>
-
       </div>
-
     </div>
 
     <!-- RIGHT (Slider Card) -->
-    <div class="relative">
-
-      <div class="bg-gray-200 rounded-2xl overflow-hidden shadow-2xl relative">
-
+    <div class="relative w-full">
+      <div class="bg-gray-200 rounded-2xl overflow-hidden shadow-2xl relative w-full">
         <!-- Image -->
-        <img 
-          [src]="currentCertificate.image"
-          class="w-full h-full object-cover"
-        />
+        <img [src]="currentCertificate.image" class="w-full h-full object-cover" />
 
         <!-- Left Arrow -->
-        <button 
-          (click)="prev()"
-          class="absolute left-3 top-1/2 -translate-y-1/2 bg-gray-500/70 p-3 rounded-full text-white hover:bg-gray-600 transition">
+        <button (click)="prev()" class="absolute left-3 top-1/2 -translate-y-1/2 bg-gray-500/70 p-3 rounded-full text-white hover:bg-gray-600 transition">
           <fa-icon [icon]="faChevronLeft"></fa-icon>
         </button>
 
         <!-- Right Arrow -->
-        <button 
-          (click)="next()"
-          class="absolute right-3 top-1/2 -translate-y-1/2 bg-gray-500/70 p-3 rounded-full text-white hover:bg-gray-600 transition">
+        <button (click)="next()" class="absolute right-3 top-1/2 -translate-y-1/2 bg-gray-500/70 p-3 rounded-full text-white hover:bg-gray-600 transition">
           <fa-icon [icon]="faChevronRight"></fa-icon>
         </button>
 
@@ -106,16 +80,10 @@
         <!-- Dots -->
         <div class="absolute bottom-4 right-4 flex gap-2">
           @for (cert of certificates; track $index; let i = $index) {
-            <span 
-              [class]="i === currentIndex ? 'h-2 rounded-full w-6 bg-blue-500' : 'h-2 rounded-full w-2 bg-gray-400'">
-            </span>
+            <span [class]="i === currentIndex ? 'h-2 rounded-full w-6 bg-blue-500' : 'h-2 rounded-full w-2 bg-gray-400'"></span>
           }
         </div>
-
       </div>
-
     </div>
-
   </div>
-
 </section>

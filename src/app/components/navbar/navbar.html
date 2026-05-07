@@ -1,28 +1,58 @@
-<nav class="sticky top-0 z-50 flex items-center justify-between px-26 py-5 bg-[#0a0f1e] border-b border-white/10">
+<nav class="sticky top-0 z-50 flex flex-wrap items-center justify-between gap-4 px-4 md:px-6 lg:px-26 py-4 bg-[#0a0f1e] border-b border-white/10">
+  <!-- Logo and Name -->
   <div class="flex items-center gap-3">
     <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white text-sm">A</div>
-    <span class="text-white font-semibold tracking-wide text-lg">AKHILESH <span class="text-blue-500">SHARMA</span></span>
+    <span class="text-white font-semibold tracking-wide text-base sm:text-lg">AKHILESH <span class="text-blue-500">SHARMA</span></span>
   </div>
 
-  <ul class="flex gap-8 list-none">
-    <li><a routerLink="/" fragment="home" class="text-white hover:text-white text-lg transition-colors">Home</a></li>
-    <li><a routerLink="/" fragment="about" class="text-white hover:text-white text-lg transition-colors">About</a></li>
-    <li><a routerLink="/" fragment="skills" class="text-white hover:text-white text-lg transition-colors">Skills</a></li>
-    <li><a routerLink="/" fragment="projects" class="text-white hover:text-white text-lg transition-colors">Projects</a></li>
-    <li><a routerLink="/" fragment="contact" class="text-white hover:text-white text-lg transition-colors">Contact</a></li>
+  <!-- Hamburger Menu Button (Mobile Only) -->
+  <button (click)="toggleMenu()" class="md:hidden text-white hover:text-blue-400 transition-colors">
+    <fa-icon [icon]="isMenuOpen ? faXmark : faBars" class="text-2xl"></fa-icon>
+  </button>
+
+  <!-- Navigation Menu -->
+  <ul class="hidden md:flex gap-4 lg:gap-8 list-none items-center w-full md:w-auto md:flex-1 justify-center">
+    <li><a routerLink="/" fragment="home" class="text-white hover:text-blue-400 text-sm md:text-base lg:text-lg transition-colors">Home</a></li>
+    <li><a routerLink="/" fragment="about" class="text-white hover:text-blue-400 text-sm md:text-base lg:text-lg transition-colors">About</a></li>
+    <li><a routerLink="/" fragment="skills" class="text-white hover:text-blue-400 text-sm md:text-base lg:text-lg transition-colors">Skills</a></li>
+    <li><a routerLink="/" fragment="projects" class="text-white hover:text-blue-400 text-sm md:text-base lg:text-lg transition-colors">Projects</a></li>
+    <li><a routerLink="/" fragment="contact" class="text-white hover:text-blue-400 text-sm md:text-base lg:text-lg transition-colors">Contact</a></li>
   </ul>
 
-    <div class="flex items-center gap-4">
-        <a href="https://github.com/" target="_blank" class="text-blue-400 hover:text-white transition-colors">
-            <fa-icon [icon]="faGithub" class="text-xl"></fa-icon>
-        </a>
+  <!-- Social Links (Desktop) -->
+  <div class="hidden md:flex items-center gap-4">
+    <a href="https://github.com/" target="_blank" class="text-blue-400 hover:text-white transition-colors">
+      <fa-icon [icon]="faGithub" class="text-xl"></fa-icon>
+    </a>
+    <a href="https://linkedin.com/" target="_blank" class="text-blue-400 hover:text-white transition-colors">
+      <fa-icon [icon]="faLinkedin" class="text-xl"></fa-icon>
+    </a>
+    <a href="https://x.com/" target="_blank" class="text-blue-400 hover:text-white transition-colors">
+      <fa-icon [icon]="faXTwitter" class="text-xl"></fa-icon>
+    </a>
+  </div>
 
-        <a href="https://linkedin.com/" target="_blank" class="text-blue-400 hover:text-white transition-colors">
-            <fa-icon [icon]="faLinkedin" class="text-xl"></fa-icon>
-        </a>
-
-        <a href="https://x.com/" target="_blank" class="text-blue-400 hover:text-white transition-colors">
-            <fa-icon [icon]="faXTwitter" class="text-xl"></fa-icon>
-        </a>
+  <!-- Mobile Menu (Opens on Hamburger Click) -->
+  <div *ngIf="isMenuOpen" class="w-full md:hidden bg-[#0f1729] border-t border-white/10 mt-4">
+    <ul class="flex flex-col gap-4 list-none p-4">
+      <li><a routerLink="/" fragment="home" (click)="closeMenu()" class="text-white hover:text-blue-400 transition-colors block">Home</a></li>
+      <li><a routerLink="/" fragment="about" (click)="closeMenu()" class="text-white hover:text-blue-400 transition-colors block">About</a></li>
+      <li><a routerLink="/" fragment="skills" (click)="closeMenu()" class="text-white hover:text-blue-400 transition-colors block">Skills</a></li>
+      <li><a routerLink="/" fragment="projects" (click)="closeMenu()" class="text-white hover:text-blue-400 transition-colors block">Projects</a></li>
+      <li><a routerLink="/" fragment="contact" (click)="closeMenu()" class="text-white hover:text-blue-400 transition-colors block">Contact</a></li>
+    </ul>
+    
+    <!-- Social Links (Mobile) -->
+    <div class="flex items-center gap-4 p-4 border-t border-white/10">
+      <a href="https://github.com/" target="_blank" class="text-blue-400 hover:text-white transition-colors">
+        <fa-icon [icon]="faGithub" class="text-xl"></fa-icon>
+      </a>
+      <a href="https://linkedin.com/" target="_blank" class="text-blue-400 hover:text-white transition-colors">
+        <fa-icon [icon]="faLinkedin" class="text-xl"></fa-icon>
+      </a>
+      <a href="https://x.com/" target="_blank" class="text-blue-400 hover:text-white transition-colors">
+        <fa-icon [icon]="faXTwitter" class="text-xl"></fa-icon>
+      </a>
     </div>
+  </div>
 </nav>

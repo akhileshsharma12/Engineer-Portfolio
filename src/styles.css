@@ -1,16 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+﻿/* You can add global styles to this file, and also import other style files */
 
-/* @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&display=swap'); */
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;900&display=swap');
 @import "tailwindcss";
 
-/* html, body {
-  height: 100%;
+html {
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-height: 100%;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   background-color: #0a0f1e;
   font-family: 'Barlow Condensed', sans-serif;
-} */
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 .glow-text-wrapper {
   position: relative;
@@ -22,7 +36,8 @@
   position: absolute;
   inset: 0;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 6rem;
+  font-size: clamp(3rem, 10vw, 6rem);
+  white-space: nowrap;
   font-weight: 900;
   text-transform: uppercase;
   color: transparent;
@@ -41,7 +56,6 @@
 }
 
 @keyframes blink-glow {
-
   0%,
   100% {
     opacity: 0.15;
