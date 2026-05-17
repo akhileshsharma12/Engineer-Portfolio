@@ -47,7 +47,7 @@
       <!-- Points -->
       <ul class="space-y-5 mb-8">
         @for (point of points; track point.text) {
-          <li class="flex flex-col sm:flex-row items-start gap-4">
+          <li class="flex flex-row sm:flex-row items-start gap-4">
             <div class="mt-1 w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style="background: rgba(37, 99, 235, 0.15); border: 1px solid rgba(59, 130, 246, 0.3)">
               <fa-icon [icon]="point.icon" [class]="point.color + ' text-xl'"></fa-icon>
             </div>

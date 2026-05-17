@@ -1,0 +1,174 @@
+<section id="skills" class="px-16 py-24 bg-[#0a0f1e]">
+
+  <!-- Section Heading -->
+  <div class="text-center mb-16">
+    <h2 class="font-medium uppercase tracking-tight text-white mb-3
+               flex items-center justify-center gap-4"
+        style="font-family: 'Barlow Condensed', sans-serif; font-size: 5rem; line-height: 1;">
+      <span style="
+        font-size: 5rem; font-weight: 900;
+        color: transparent; -webkit-text-stroke: 2px #3b82f6; line-height: 1;"
+        class="text-[3.5rem] md:text-[4rem]">05</span>
+      <span class="text-white text-[2.5rem] md:text-[4rem]">MY SKILLS</span>
+    </h2>
+    <div class="w-32 h-0.75 mx-auto mb-5"
+         style="background: linear-gradient(90deg, #1d4ed8, #60a5fa); border-radius: 999px;"></div>
+    <p class="text-slate-400 text-base">My technical stack and expertise</p>
+  </div>
+
+  <!-- Grid -->
+  <div class="grid grid-cols-2 gap-6 max-w-6xl mx-auto">
+
+    <!-- Card 1 — Frontend & JavaScript -->
+    <div class="rounded-2xl p-8"
+         style="background: #0f1729; border: 1px solid rgba(59,130,246,0.15);">
+
+      <h3 class="text-white font-black text-base uppercase tracking-wider mb-8
+                 flex items-center gap-3"
+          style="font-family: 'Barlow Condensed', sans-serif;">
+        <fa-icon [icon]="faCode" class="text-blue-400 text-lg"></fa-icon>
+        FRONTEND & JAVASCRIPT
+      </h3>
+
+      <div class="space-y-6">
+        @for (skill of frontendSkills; track skill.name) {
+          <div>
+            <div class="flex justify-between mb-2">
+              <span class="text-slate-400 text-xs font-semibold tracking-widest">
+                {{ skill.name }}
+              </span>
+              <span class="text-blue-400 text-xs font-bold">{{ skill.percent }}%</span>
+            </div>
+            <div class="w-full h-[6px] rounded-full"
+                 style="background: rgba(255,255,255,0.06);">
+              <div class="skill-bar-fill h-full rounded-full transition-all duration-1000 ease-out"
+                   [attr.data-width]="skill.percent"
+                   style="width: 0%; background: linear-gradient(90deg, #1d4ed8, #60a5fa);">
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+
+    </div>
+
+    <!-- Card 2 — Backend & Database (Circle Skills) -->
+    <div class="rounded-2xl p-8"
+         style="background: #0f1729; border: 1px solid rgba(59,130,246,0.15);">
+
+      <h3 class="text-white font-black text-base uppercase tracking-wider mb-8
+                 flex items-center gap-3"
+          style="font-family: 'Barlow Condensed', sans-serif;">
+        <fa-icon [icon]="faBolt" class="text-blue-400 text-lg"></fa-icon>
+        BACKEND & DATABASE
+      </h3>
+
+      <div class="flex items-center justify-around">
+        @for (skill of circleSkills; track skill.name) {
+          <div class="flex flex-col items-center gap-3">
+
+            <!-- Circle SVG -->
+            <svg width="120" height="120" viewBox="0 0 120 120">
+              <!-- Background circle -->
+              <circle cx="60" cy="60" r="54"
+                      fill="none"
+                      stroke="rgba(255,255,255,0.06)"
+                      stroke-width="8"/>
+              <!-- Progress circle -->
+              <circle cx="60" cy="60" r="54"
+                      fill="none"
+                      stroke="url(#blueGrad)"
+                      stroke-width="8"
+                      stroke-linecap="round"
+                      [attr.stroke-dasharray]="getCircleDash(skill.percent)"
+                      stroke-dashoffset="0"
+                      transform="rotate(-90 60 60)"/>
+              <defs>
+                <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%"   stop-color="#1d4ed8"/>
+                  <stop offset="100%" stop-color="#60a5fa"/>
+                </linearGradient>
+              </defs>
+              <!-- Percent text -->
+              <text x="60" y="65"
+                    text-anchor="middle"
+                    fill="white"
+                    font-size="18"
+                    font-weight="900"
+                    font-family="Barlow Condensed, sans-serif">
+                {{ skill.percent }}%
+              </text>
+            </svg>
+
+            <span class="text-slate-400 text-xs tracking-widest uppercase font-semibold">
+              {{ skill.name }}
+            </span>
+
+          </div>
+        }
+      </div>
+
+    </div>
+
+    <!-- Card 3 — Styling & Design -->
+    <div class="rounded-2xl p-8"
+         style="background: #0f1729; border: 1px solid rgba(59,130,246,0.15);">
+
+      <h3 class="text-white font-black text-base uppercase tracking-wider mb-8
+                 flex items-center gap-3"
+          style="font-family: 'Barlow Condensed', sans-serif;">
+        <fa-icon [icon]="faPalette" class="text-blue-400 text-lg"></fa-icon>
+        STYLING & DESIGN
+      </h3>
+
+      <div class="space-y-6">
+        @for (skill of stylingSkills; track skill.name) {
+          <div>
+            <div class="flex justify-between mb-2">
+              <span class="text-slate-400 text-xs font-semibold tracking-widest">
+                {{ skill.name }}
+              </span>
+              <span class="text-blue-400 text-xs font-bold">{{ skill.percent }}%</span>
+            </div>
+            <div class="w-full h-[6px] rounded-full"
+                 style="background: rgba(255,255,255,0.06);">
+              <div class="skill-bar-fill h-full rounded-full transition-all duration-1000 ease-out"
+                   [attr.data-width]="skill.percent"
+                   style="width: 0%; background: linear-gradient(90deg, #1d4ed8, #60a5fa);">
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+
+    </div>
+
+    <!-- Card 4 — Tools -->
+    <div class="rounded-2xl p-8"
+         style="background: #0f1729; border: 1px solid rgba(59,130,246,0.15);">
+
+      <h3 class="text-white font-black text-base uppercase tracking-wider mb-8
+                 flex items-center gap-3"
+          style="font-family: 'Barlow Condensed', sans-serif;">
+        <fa-icon [icon]="faBolt" class="text-orange-400 text-lg"></fa-icon>
+        TOOLS & OTHERS
+      </h3>
+
+      <div class="space-y-5">
+        @for (tool of tools; track tool.name) {
+          <div class="flex items-center gap-4 py-2"
+               style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                 style="background: rgba(37,99,235,0.15); border: 1px solid rgba(59,130,246,0.3);">
+              <fa-icon [icon]="faArrowRight" class="text-blue-400 text-xs"></fa-icon>
+            </div>
+            <span class="text-slate-300 text-sm font-semibold">{{ tool.name }}</span>
+          </div>
+        }
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

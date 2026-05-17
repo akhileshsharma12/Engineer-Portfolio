@@ -23,7 +23,7 @@
     <div class="border-t border-white/10 mb-12"></div>
 
     <!-- Stats -->
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center justify-center mb-16 text-center sm:divide-x sm:divide-white/10">
+    <div class="grid grid-cols-3 gap-6 items-center justify-center mb-16 text-center sm:divide-x sm:divide-white/10">
       @for (stat of stats; track stat.label) {
         <div class="flex flex-col items-center gap-2 px-6">
           <span class="font-medium text-white text-4xl md:text-[3.5rem]" style="font-family: 'Barlow Condensed', sans-serif; line-height: 1;">{{ stat.value }}</span>
