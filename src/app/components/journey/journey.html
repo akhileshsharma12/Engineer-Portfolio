@@ -59,37 +59,46 @@
         <div class="absolute left-2 sm:left-2.5 md:left-3 top-1 bottom-0 w-0.5 sm:w-1 md:w-[2px]" style="background: linear-gradient(180deg, #1d4ed8, rgba(59,130,246,0.1));"></div>
 
         <div class="space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8">
-          @for (exp of experience; track exp.company) {
-            <div class="flex gap-2.5 sm:gap-3 md:gap-4">
-              <!-- Dot -->
-              <div class="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full border-2 border-blue-500 bg-[#0f1729] z-10 flex items-center justify-center mt-0">
-                <div class="w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 rounded-full bg-blue-500"></div>
-              </div>
-
-              <!-- Content -->
-              <div class="w-full">
-                <h4 class="text-white font-bold text-xs sm:text-sm md:text-base lg:text-lg leading-snug mb-0.5 break-words">{{ exp.company }}</h4>
-                <p class="text-blue-400 text-xs font-semibold mb-1 sm:mb-2 tracking-wide">{{ exp.period }}</p>
-
-                <!-- Tags -->
-                <div class="flex flex-wrap gap-1 sm:gap-1.5 md:gap-2 mb-2 sm:mb-3 md:mb-4">
-                  @for (tag of exp.tags; track tag) {
-                    <span class="px-2 sm:px-2.5 md:px-3 py-0.5 rounded text-xs md:text-sm font-semibold text-blue-300 whitespace-nowrap" style="border: 1px solid rgba(59,130,246,0.4); background: rgba(37,99,235,0.1);">{{ tag }}</span>
-                  }
-                </div>
-
-                <!-- Points -->
-                <ul class="space-y-1 sm:space-y-1.5 md:space-y-2">
-                  @for (point of exp.points; track point) {
-                    <li class="text-slate-400 text-xs sm:text-sm md:text-base leading-relaxed flex items-start gap-1.5 sm:gap-2">
-                      <span class="text-slate-500 mt-0.5 sm:mt-0.5 md:mt-1 flex-shrink-0">•</span>
-                      <span>{{ point }}</span>
-                    </li>
-                  }
-                </ul>
-              </div>
+          <!-- Internship 1: Propil Technologies -->
+          <div class="flex gap-2.5 sm:gap-3 md:gap-4">
+            <!-- Dot -->
+            <div class="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full border-2 border-blue-500 bg-[#0f1729] z-10 flex items-center justify-center mt-0">
+              <div class="w-1 h-1 sm:w-1.5 sm:h-1.5 md:w-2 md:h-2 rounded-full bg-blue-500"></div>
             </div>
-          }
+
+            <!-- Content -->
+            <div class="w-full pb-2">
+              <h4 class="text-white font-bold text-xs sm:text-sm md:text-base lg:text-lg leading-snug mb-0.5 break-words">Frontend Developer Intern</h4>
+              <p class="text-blue-400 text-md font-semibold mb-2 sm:mb-3 tracking-wide">Propil Technologies And Advisors Pvt Ltd • August 2025 – Feb 2026 (6 Months)</p>
+              
+              <!-- <div class="mb-3">
+                <h5 class="text-slate-300 text-xs sm:text-sm font-semibold mb-1">Projects: <span class="text-slate-400 font-normal">Property Verification Platform</span></h5>
+                <p class="text-slate-400 text-[10px] sm:text-xs md:text-sm leading-relaxed text-justify">
+                  Developed a comprehensive, public-facing property verification platform designed to help users verify properties, discover company services, and complete customer onboarding through a smooth, SEO-optimized web experience. The platform was built with Next.js and focused on performance, scalability, and search visibility. It included an interactive Prop-Map feature powered by Mapbox, allowing users to explore and visualize property locations dynamically, making property discovery more intuitive and data-driven. Additionally, I implemented a Prop-News module that automatically updates daily with property and company-related news, ensuring fresh content and improving user engagement and repeat visits. The website also featured dynamic service pages, optimized landing pages, and a responsive UI to deliver a consistent experience across devices, helping strengthen user trust and the overall credibility of the property verification process.
+                </p>
+              </div> -->
+              
+              <h5 class="text-slate-300 text-xs sm:text-sm font-semibold mb-1.5">Role & Responsibilities:</h5>
+              <ul class="space-y-1 sm:space-y-1.5 md:space-y-2">
+                <li class="text-slate-400 text-[10px] sm:text-xs md:text-sm leading-relaxed flex items-start gap-1.5 sm:gap-2">
+                  <span class="text-slate-500 mt-0.5 flex-shrink-0">•</span>
+                  <span>Developed and maintained the company website and internal web applications using Next.js.</span>
+                </li>
+                <li class="text-slate-400 text-[10px] sm:text-xs md:text-sm leading-relaxed flex items-start gap-1.5 sm:gap-2">
+                  <span class="text-slate-500 mt-0.5 flex-shrink-0">•</span>
+                  <span>Built responsive, SEO-friendly UI components and pages.</span>
+                </li>
+                <li class="text-slate-400 text-[10px] sm:text-xs md:text-sm leading-relaxed flex items-start gap-1.5 sm:gap-2">
+                  <span class="text-slate-500 mt-0.5 flex-shrink-0">•</span>
+                  <span>Collaborated with designers and backend developers to deliver scalable web solutions.</span>
+                </li>
+                <li class="text-slate-400 text-[10px] sm:text-xs md:text-sm leading-relaxed flex items-start gap-1.5 sm:gap-2">
+                  <span class="text-slate-500 mt-0.5 flex-shrink-0">•</span>
+                  <span>Participated in testing, bug fixing, and deployment support to ensure smooth production releases.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
