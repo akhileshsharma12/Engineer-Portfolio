@@ -18,8 +18,8 @@ export class Footer {
   year = new Date().getFullYear();
 
   socials: SocialLink[] = [
-    { label: 'LINKEDIN', url: 'https://linkedin.com/in/yourprofile' },
-    { label: 'GITHUB', url: 'https://github.com/yourprofile' },
-    { label: 'TWITTER', url: 'https://twitter.com/yourprofile' },
+    { label: 'LINKEDIN', url: 'https://www.linkedin.com/in/akhilesh-sharma-dev/' },
+    { label: 'GITHUB', url: 'https://github.com/akhileshsharma12' },
+    // { label: 'TWITTER', url: 'https://twitter.com/yourprofile' },
   ];
 }
